@@ -8,10 +8,25 @@
 
 import UIKit
 
-struct MediaPost: Identifiable {
+class MediaPost: Identifiable, ObservableObject {
   let id = UUID()
   let textBody: String?
   let userName: String
   let timestamp: Date
   let uiImage: UIImage?
+  @Published var isLiked = false
+    
+  init(
+      textBody: String?,
+      userName: String,
+      timestamp: Date,
+      uiImage: UIImage? = nil,
+      isLiked: Bool = false
+    ) {
+      self.textBody = textBody
+      self.userName = userName
+      self.timestamp = timestamp
+      self.uiImage = uiImage
+      self.isLiked = isLiked
+    }
 }

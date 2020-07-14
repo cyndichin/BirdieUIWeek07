@@ -68,6 +68,7 @@
 			children = (
 				CD7798B824AF0799004D6A6B /* AppDelegate.swift */,
 				CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */,
+				D77C4AF024BD2F9100F9752E /* UIKit */,
 				D7FCC32624BA5EA800451C9D /* Model */,
 				D7FCC31F24BA5E8800451C9D /* View */,
 				CD7798BE24AF079C004D6A6B /* Assets.xcassets */,
@@ -86,6 +87,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D77C4AF024BD2F9100F9752E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D7FCC32824BA5EA800451C9D /* ImagePicker.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		D7FCC31F24BA5E8800451C9D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				D7FCC32724BA5EA800451C9D /* PostViewModel.swift */,
-				D7FCC32824BA5EA800451C9D /* ImagePicker.swift */,
 				D7FCC32924BA5EA800451C9D /* MediaPost.swift */,
 			);
 			name = Model;
@@ -323,7 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Birdui/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ERK77LXE;
+				DEVELOPMENT_TEAM = SVBG9WTA7B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birdui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -343,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Birdui/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ERK77LXE;
+				DEVELOPMENT_TEAM = SVBG9WTA7B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birdui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

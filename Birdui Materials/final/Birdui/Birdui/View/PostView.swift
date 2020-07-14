@@ -9,13 +9,12 @@
 import SwiftUI
 
 struct PostView: View {
-    let post: MediaPost
+    @ObservedObject var post: MediaPost
     static let postDateFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMM, HH:mm"
         return formatter
     }()
-    
     var body: some View {
         // TODO: This should look exactly like Birdie's table view cell.
         // The post text is left-aligned below the mascot image.
@@ -32,19 +31,29 @@ struct PostView: View {
                 Spacer()
             }
             
-            HStack {
-                Text(post.textBody ?? "")
-                Spacer()
+    
+            Text(post.textBody ?? "")
+            Spacer()
+            if post.uiImage != nil {
+                Image(uiImage: post.uiImage!)
+                    .resizable()
+                    .frame(width: 80, height: 80, alignment: .center)
             }
-            
-            HStack{
-                if post.uiImage != nil {
-                    Image(uiImage: post.uiImage!)
-                        .resizable()
-                        .frame(width: 80, height: 80, alignment: .center)
-                }
+            Button(action: {
+              withAnimation {
+                self.post.isLiked.toggle()
+              }
+            }) {
+              Text(verbatim: "Like")
+                .foregroundColor(Color.white)
+                .padding([.leading, .trailing], 10)
+                .padding([.top, .bottom], 5)
+                .background(Color.purple)
+                .cornerRadius(5)
+                .opacity(self.post.isLiked ? 1 : 0.5)
+                .saturation(self.post.isLiked ? 1 : 0.5)
             }
-        }
+        }.buttonStyle(PlainButtonStyle())
     }
 }
 
